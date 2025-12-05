@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-17 Flying Fortress Interior Tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Navigation Panel -->
+        <div id="nav-panel" class="nav-panel">
+            <h2>B-17 Interior Map</h2>
+            <div class="compartment-list">
+                <div class="compartment-item" data-compartment="nose">
+                    <span class="compartment-icon">🔫</span>
+                    <span class="compartment-name">Waist Compartment</span>
+                </div>
+                <div class="compartment-item" data-compartment="cockpit">
+                    <span class="compartment-icon">📻</span>
+                    <span class="compartment-name">Radio Room</span>
+                </div>
+                <div class="compartment-item" data-compartment="radio">
+                    <span class="compartment-icon">💣</span>
+                    <span class="compartment-name">Bomb Bay</span>
+                </div>
+                <div class="compartment-item" data-compartment="bomb-bay">
+                    <span class="compartment-icon">🎯</span>
+                    <span class="compartment-name">Bombardier/Nose Compartment</span>
+                </div>
+                <div class="compartment-item" data-compartment="waist-right">
+                    <span class="compartment-icon">✈️</span>
+                    <span class="compartment-name">Cockpit</span>
+                </div>
+            </div>
+            <button id="toggle-nav" class="toggle-btn">Hide Map</button>
+            <button id="settings-btn" class="compartment-item settings-btn" title="Switch Language">
+                <span class="compartment-icon">🌐</span>
+                <span class="compartment-name">Español</span>
+            </button>
+        </div>
+
+        <!-- 360 Viewer Container -->
+        <div id="panorama-container">
+            <div id="panorama"></div>
+            
+            <!-- Compartment Info Overlay -->
+            <div id="compartment-info">
+                <div class="compartment-header">
+                    <h3 id="compartment-title">Waist Compartment</h3>
+                    <button id="toggle-description" class="toggle-description-btn" title="Toggle Description">▼</button>
+                </div>
+                <div id="compartment-description-container" class="description-container">
+                    <p id="compartment-description">Side-opening section containing two waist gun positions (left and right).</p>
+                </div>
+            </div>
+
+            <!-- Mouse Coordinates Display (Temporary) -->
+            <div id="mouse-coords" class="mouse-coords">
+                <div>Yaw: <span id="yaw-value">0</span>°</div>
+                <div>Pitch: <span id="pitch-value">0</span>°</div>
+            </div>
+
+            <!-- Controls -->
+            <div id="controls">
+                <button id="toggle-fullscreen" class="control-btn" title="Toggle Fullscreen">⛶</button>
+                <button id="toggle-nav-btn" class="control-btn" title="Toggle Map">🗺️</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
